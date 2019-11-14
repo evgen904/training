@@ -1,3 +1,84 @@
 .red {
 	color: #c00;
 }
+
+
+
+.box {
+	display: inline-block;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	padding: 8px;
+
+	/*background: linear-gradient(to top, #c00, #00c);*/ /* снизу вверх */
+	/*background: linear-gradient(to right, #c00, #00c);*/ /* слева направо */
+	/*background: linear-gradient(to top, #c00, #00c);*/ /* сверху вниз */
+	/*background: linear-gradient(to left, #c00, #00c);*/ /* справа налево */
+	/*background: linear-gradient(45deg, #c00, #00c);*/ /* 45 градусов */
+	/*background: linear-gradient(to right, #c00 20%, #00c 40%, #0c0 80%);*/ /* несколько цветов - плавный градиент */
+	/*background: linear-gradient(to right, #79e17b 20%, #baefbb 20%, #baefbb 80%, #44de48 80%);*/ /* несколько цветов - резкий переход */
+
+	/*background: radial-gradient(white, #FFA9A1);*/
+	/*background: radial-gradient(at top, #FEFFFF, #A7CECC);*/ /* сверху вниз */
+	/*background: radial-gradient(10% 50%, #FAECD5, #CAE4D8);*/ /* 10% - ширина. 50% - высота */
+	/* background: radial-gradient(farthest-side ellipse at top left, white, #aaaaaa);*/ /* смещеный */
+
+	/*background: radial-gradient(transparent, transparent 4px, white 4px,white);*/
+	/*background-size: 20px 20px;*/
+	/*background-position: -10px -10px;*/ /*обрезаем узор по краю*/
+
+	/*background: repeating-linear-gradient(45deg, #fff000, #fff000 10px, #000 10px, #000 20px);*/ /* фон с повторением */
+
+	/*background: repeating-radial-gradient(circle, #B9ECFE, #B9ECFE 10px, #82DDFF 10px, #82DDFF 20px);*/ /* фон с повторением - круг*/
+
+	/*background: linear-gradient(45deg, rgba(103, 0, 31, .8), rgba(34, 101, 163, .5)), url(https://html5book.ru/wp-content/uploads/2016/12/photo-8.jpg); 
+	/*background-size: cover;*/
+
+	background: repeating-linear-gradient(45deg, #fff000, #fff000 10px, #000 10px, #000 20px);
+	background-size: 28px;
+	animation: bg 0.5s infinite cubic-bezier(0, 0, 1, 1);
+
+}
+
+.box-in {
+	background: #fff;
+	padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    animation: text 3s infinite cubic-bezier(0, 0, 1, 1);
+}
+
+
+@keyframes bg {
+	0% {
+		background-position: 0 0px;
+	}
+	100% {
+		background-position: 28px 0px;
+	}
+}
+
+@keyframes text {
+	0% {
+		color: #000;
+	}
+	20% {
+		color: #ec0000;
+	}
+	40% {
+		color: #ec00de;
+	}
+	60% {
+		color: #0006ec;
+	}
+	80% {
+		color: #ece900;
+	}
+	100% {
+		color: #000;
+	}
+}
